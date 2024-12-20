@@ -1,0 +1,146 @@
+body {
+  background-color: #efd0ab;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-size: 14px; 
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column; 
+  gap: 8px; 
+}
+
+.input-wrapper {
+  display: flex; 
+  align-items: center; 
+}
+
+.input-title, .input-description {
+  border: 2px solid rgb(161, 161, 161);
+  padding: 4px; 
+  width: 320px; 
+}
+
+.input-title {
+  height: 35px; 
+}
+
+.input-description {
+  height: 80px; 
+}
+
+.input-title:focus,
+.input-description:focus {
+  outline: none;
+  border-color: rgb(161, 161, 161);
+}
+
+.Add {
+  width: 90px; 
+  height: 40px; 
+  background-color: rgb(240, 145, 145);
+  margin-left: 1%;
+  cursor: pointer; 
+}
+
+.Add:hover {
+  background-color: rgb(220, 120, 120); 
+}
+
+.filter-container {
+  margin-top: 8px; 
+  display: flex; 
+  align-items: center; 
+  margin-bottom: 1%;
+}
+
+ul {
+  list-style-type: none; 
+  padding: 0; 
+  width: 50%; 
+  margin: 8px 0; 
+}
+
+li {
+  background-color: #fff; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  padding: 8px; 
+  margin: 8px 0;
+  display: flex; 
+  justify-content: space-between; 
+  align-items: flex-start; 
+} 
+
+.todo-title {
+  flex-grow: 1;
+  word-break: break-all;
+  white-space: normal;
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+}
+
+.todo-description {
+  word-break: break-all;
+  white-space: normal;
+  margin-top: 4px; 
+}
+
+.delete {
+  background-color: #ff4d4d; 
+  color: white; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  padding: 4px 8px; 
+}
+
+.todo-item.completed {
+  text-decoration: line-through;
+  color: grey;
+}
+
+select {
+  width: 140px; 
+  height: 35px; 
+  margin-top: 8px; 
+  margin-bottom: 1%;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-start; 
+  margin-top: 8px; 
+}
+
+#Generate, #DeleteAll {
+  width: 100px; 
+  height: 40px; 
+  background-color: rgb(238, 226, 226);
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  margin-right: 8px; 
+  transition: background-color 0.3s; 
+}
+
+#Generate:hover, #DeleteAll:hover {
+  background-color: rgb(220, 220, 220); 
+}
+
+@media (max-width: 600px) {
+  #Generate, #DeleteAll {
+    width: 80%; 
+    margin-bottom: 10px; 
+  }
+
+  ul {
+    width: 100%; 
+  }
+
+  .input-title, .input-description {
+    width: 90%; 
+  }
+}
